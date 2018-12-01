@@ -1,31 +1,43 @@
-var i = 0
+function houseOrOrganizationOrElse() {
+  var i = 0
+  while (i < gameOfThronesCharacters.length) {
+    if (gameOfThronesCharacters.hasOwnProperty(i)) {
+      if (gameOfThronesCharacters[i].organization) {
+      document.querySelector(`#house${[i]}`).innerHTML +=
+        `${gameOfThronesCharacters[i].organization}`;
+      } else if (gameOfThronesCharacter[i].house) {
+      document.querySelector(`#house${[i]}`).innerHTML +=
+        `${gameOfThronesCharacters[i].house}`;
+      } else if (gameOfThronesCharacters[i].alias) {
+      document.querySelector(`#house${[i]}`).innerHTML +=
+        `${gameOfThronesCharacters[i].alias}`;
+      }
+    }
+    i++;
+  }
+}
 
-while (i < gameOfThronesCharacters.length) {
-  if (gameOfThronesCharacters.hasOwnProperty(i)) {
-    if (gameOfThronesCharacters[i].organization) {
-      document.querySelector('.table__body').innerHTML += 
-      `<tr>
+function initialListing() {
+  var i = 0
+  while (i < gameOfThronesCharacters.length) {
+    if (gameOfThronesCharacters.hasOwnProperty(i)) {
+      document.querySelector('.table__body').innerHTML +=
+        `<tr>
       <td>${gameOfThronesCharacters[i].name}</td>
-      <td><img class='proba' src="${gameOfThronesCharacters[i].portrait}" alt="${gameOfThronesCharacters[i].name}"></td>
-      <td>${gameOfThronesCharacters[i].organization}</td>
-      <td>${gameOfThronesCharacters[i].bio}</td>
-      <td><img src="./img/icons/edit.png" alt="edit" class="table-edit"></td>
-      <td><img src="./img/icons/delete.png" alt="delete" onclick="deleteRow()" class="table-remove"></td>
-      </tr>`;
-    } else if (gameOfThronesCharacters[i].house) {
-      document.querySelector('.table__body').innerHTML += 
-      `<tr>
-      <td>${gameOfThronesCharacters[i].name}</td>
-      <td><img class='proba' src="${gameOfThronesCharacters[i].portrait}" alt="${gameOfThronesCharacters[i].name}"></td>
-      <td>${gameOfThronesCharacters[i].house}</td>
+      <td><img src="${gameOfThronesCharacters[i].portrait}" alt="${gameOfThronesCharacters[i].name}"></td>
+      <td id="house${[i]}"></td>
       <td>${gameOfThronesCharacters[i].bio}</td>
       <td><img src="./img/icons/edit.png" alt="edit" class="table-edit"></td>
       <td><img src="./img/icons/delete.png" alt="delete" onclick="deleteRow()" class="table-remove"></td>
       </tr>`;
     }
+    i++;
   }
-  i++;
+  houseOrOrganizationOrElse()
 }
+
+
+initialListing()
 
 function deleteRow() {
   var td = event.target.parentNode;
@@ -34,7 +46,7 @@ function deleteRow() {
 }
 
 function editRow() {
-  
+
 }
 
 function compareByName(a, b) {
@@ -54,35 +66,47 @@ function compareByHouse(a, b) {
 }
 
 function ascByName() {
-  var charactersByName = gameOfThronesCharacters.sort(compareByName);
-  var i = 0;
+  gameOfThronesCharacters.sort(compareByName);
   document.querySelector('.table__body').innerHTML = "";
-  while (i < charactersByName.length) {
-    if (gameOfThronesCharacters.hasOwnProperty(i)) {
-      document.querySelector('.table__body').innerHTML +=
-        `<tr>
-        <td>${gameOfThronesCharacters[i].name}</td>
-        <td><img class='proba' src="${gameOfThronesCharacters[i].portrait}" alt="${gameOfThronesCharacters[i].name}"></td>
-        <td>${gameOfThronesCharacters[i].organization}</td>
-        <td>${gameOfThronesCharacters[i].bio}</td>
-        <td><img src="./img/icons/edit.png" alt="edit" class="table-edit"></td>
-        <td><img src="./img/icons/delete.png" alt="delete" onclick="deleteRow()" class="table-remove"></td>
-        </tr>`;
-    }
-    i++;
-  }
+  initialListing();
 }
 
 function descByName() {
-  var charactersByName = gameOfThronesCharacters.sort(compareByName);
-  var i = charactersByName.length - 1;
+  gameOfThronesCharacters.sort(compareByName);
+  var i = gameOfThronesCharacters.length - 1;
   document.querySelector('.table__body').innerHTML = "";
   while (i >= 0) {
     if (gameOfThronesCharacters.hasOwnProperty(i)) {
       document.querySelector('.table__body').innerHTML +=
         `<tr>
         <td>${gameOfThronesCharacters[i].name}</td>
-        <td><img class='proba' src="${gameOfThronesCharacters[i].portrait}" alt="${gameOfThronesCharacters[i].name}"></td>
+        <td><img src="${gameOfThronesCharacters[i].portrait}" alt="${gameOfThronesCharacters[i].name}"></td>
+        <td>${gameOfThronesCharacters[i].organization}</td>
+        <td>${gameOfThronesCharacters[i].bio}</td>
+        <td><img src="./img/icons/edit.png" alt="edit" class="table-edit"></td>
+        <td><img src="./img/icons/delete.png" alt="delete" onclick="deleteRow()" class="table-remove"></td>
+        </tr>`;
+    }
+    i -= 1;
+  }
+}
+
+function ascByHouse() {
+  gameOfThronesCharacters.sort(compareByHouse);
+  document.querySelector('.table__body').innerHTML = "";
+  initialListing();
+}
+
+function descByHouse() {
+  gameOfThronesCharacters.sort(compareByHouse);
+  var i = gameOfThronesCharacters.length - 1;
+  document.querySelector('.table__body').innerHTML = "";
+  while (i >= 0) {
+    if (gameOfThronesCharacters.hasOwnProperty(i)) {
+      document.querySelector('.table__body').innerHTML +=
+        `<tr>
+        <td>${gameOfThronesCharacters[i].name}</td>
+        <td><img src="${gameOfThronesCharacters[i].portrait}" alt="${gameOfThronesCharacters[i].name}"></td>
         <td>${gameOfThronesCharacters[i].organization}</td>
         <td>${gameOfThronesCharacters[i].bio}</td>
         <td><img src="./img/icons/edit.png" alt="edit" class="table-edit"></td>
