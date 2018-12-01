@@ -25,14 +25,38 @@ function housesInit() {
   return arr;
 }
 
-// végrehajtás
-housesList();
-housesInit();
+function housesSum() {
+  var szoveg = '';
+  var houses = housesInit();
+  for (i = 0; i < gameOfThronesCharacters.length; i++) {
+    if ( gameOfThronesCharacters[i].house) {
+      for (var j = 0; j < houses.length; j++)  {
+        if (gameOfThronesCharacters[i].house === houses[j].house) {
+          houses[j].sum += 1;
+          j = houses.length;
+        }
+      }
+    }
+  }
 
-// write
-arr = housesInit();
+  // document.querySelector('#solution').innerHTML = szoveg;
 
-for (i = 0; i < arr.length; i++) {
-  document.querySelector('#solution').innerHTML += '<div width: 500px;>' + arr[i].house + '  <img src=' + arr[i].image + ' alt=' + arr[i].house + '>házak tagja' + arr[i].sum + ' </div>';
+  // write
+  // for (i = 0; i < t.length; i++) {
+  // document.querySelector('#solution').innerHTML += ', ' + t[i];
+  // }
+
+  return houses;
 }
 
+// végrehajtás
+// housesList();
+// housesInit();
+housesSum();
+
+// write
+arr = housesSum();
+
+for (i = 0; i < arr.length; i++) {
+  document.querySelector('#solution').innerHTML += '<div width: 500px;>' + arr[i].house + '  <img src=' + arr[i].image + ' alt=' + arr[i].house + '>házak tagja ' + arr[i].sum + ' </div>';
+}
