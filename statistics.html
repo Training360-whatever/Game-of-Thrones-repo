@@ -8,6 +8,7 @@
 <link href="https://fonts.googleapis.com/css?family=Cinzel+Decorative" rel="stylesheet">
 <link rel="stylesheet" href="./css/moni.css">
 <link rel="stylesheet" href="/css/matyi.css">
+<link rel="stylesheet" href="/css/statistics-menu.css">
 </head>
 
 <body>
@@ -19,7 +20,16 @@
   <ul>
     <li><a href="index.html">Main</a></li>
     <li><a href="characters.html">Characters</a></li>
-    <li class="active"><a href="statistics.html">Statistics</a></li>
+    <li class="active">
+      <div class="dropdown">
+        <button class="dropbtn">Statistics</button>
+        <div class="dropdown-content">
+          <button onclick="writeList(2)" id="showMembers">Alive/Dead</button>
+          <button onclick="writeList(1)" id="showHouses">Houses</button>
+          <button onclick="writeList(3)" id="showOrgs">Organizations</button>
+        </div>
+      </div>
+    </li>
     <li><a href="portraits.html">Portraits</a></li>
     <li><a href="gallery.html">Gallery</a></li>
   </ul>
@@ -30,18 +40,9 @@
   </div>
 </header>
 <main class="container">
-<h1>Statistics</h1>
-
-<div class="dropdown">
-  <button class="dropbtn"  >Options</button>
-    <div class="dropdown-content">
-      <button onclick="writeList(2)"id="showMembers">Alive/Dead</button>
-      <button onclick="writeList(1)" id="showHouses">Houses</button>
-      <button onclick="writeList(3)" id="showOrgs">Organizations</button>
-    </div>
-</div>
-<table id="solution">
-</table>
+  <h1>Statistics</h1>
+  <table id="solution">
+  </table>
 </main>
 
 <footer>
