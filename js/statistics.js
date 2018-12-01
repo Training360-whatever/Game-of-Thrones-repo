@@ -100,8 +100,8 @@ function writeMembers() {
 
   // var szoveg = '<tr><th>name of house</th><th>crest</th><th>number of members</th></tr>';
 
-  document.querySelector('#solutionMembers').innerHTML = '';
-  document.querySelector('#solutionMembers').innerHTML = szoveg;
+  document.querySelector('#solution').innerHTML = '';
+  document.querySelector('#solution').innerHTML = szoveg;
   // alert(szoveg);
 }
 
@@ -153,11 +153,26 @@ function writeOrgs() {
   for (var i = 0; i < orges.length; i++) {
     szoveg += '<tr><td>' +  orges[i].org + ' </td><td>' +  parseInt(orges[i].sum, 10) + ' </td></tr>';
   }
+  document.querySelector('#solution').innerHTML = '';
+  document.querySelector('#solution').innerHTML = szoveg;
+}
+function writeNothing() {
   document.querySelector('#solution3').innerHTML = '';
-  document.querySelector('#solution3').innerHTML = szoveg;
 }
 
-
+var whatList = 0;
+function writeList(n) {
+  // whatList = 1;
+  switch (n) {
+  case 1:writeHouses();
+    break;
+  case 2:writeMembers();
+    break;
+  case 3:writeOrgs();
+    break;
+  default:writeNothing();
+  }
+}
 // végrehajtás
 // housesList();
 // housesInit();
@@ -166,9 +181,24 @@ function writeOrgs() {
 // document.querySelector('#solution').innerHTML = '';
 // btnElement = document.getElementById('showHouses');
 // btnElement.addEventListener('click', writeHouses() );
-writeHouses();
-writeMembers();
-writeOrgs();
+// writeHouses();
+// writeMembers();
+// writeOrgs();
+// writeNothing();
+
+//document.getElementById('showHouses').addEventListener('click', writeList(1) );
+//document.getElementById('showMembers').addEventListener('click', writeList(2));
+//document.getElementById('showOrgs').addEventListener('click', writeList(3) );
+//switch (whatList) {
+//case 1:writeHouses();
+//  break;
+//case 2:writeMembers();
+ // break;
+//case 3:writeOrgs();
+ // break;
+//default:writeNothing();
+//}
+
 
 // write switch-el
 
