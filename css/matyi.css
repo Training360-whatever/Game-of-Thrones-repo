@@ -1,0 +1,115 @@
+#random-quote-display {
+  position: relative;
+  color: rgb(194, 180, 160);
+  font-size: 23px;
+  float: right;
+  right: 3%;
+  top: 15px;
+  letter-spacing: 3px;
+  width: 75%;
+}
+
+.active {
+  background-color: rgb(49, 45, 41);
+  box-shadow: 0 0 8px 0;
+}
+
+body {
+  margin: 0px;
+  padding: 0px;
+  background-color: rgba(133, 125, 120, 0.459)
+}
+
+.container {
+  margin: 0 auto;
+  width: 1140px;
+  padding: 15px;
+}
+
+.container h1 {
+  text-align: center;
+  font-size: 50px;
+  margin-bottom: 10px;
+}
+
+.container img.houses {
+  max-width: 1140px;
+  
+}
+
+div.top-bar {
+  background-color: rgb(49, 45, 41);
+  float: left;
+  width: 100%;
+  height: 110px;
+}
+
+.top-bar img {
+  top: 15px;
+  width: 15%;
+  position: relative;
+  left: 35px; 
+}
+
+
+.topnav {
+  background-image: radial-gradient(ellipse, rgb(49, 45, 41) 0%, rgb(63, 52, 52) 100%);
+  float: left;
+  width: 100%;
+  padding: 0;
+  box-sizing: border-box;
+  border-bottom: solid black;
+  border-top: solid black;
+}
+
+nav ul {
+  list-style-type: none;
+  width: 1140px;
+  margin: 0 auto;
+  padding: 0;
+}
+
+nav li {
+  float: left;
+  width: 20%;
+}
+
+nav li:hover {
+  background-color: rgb(49, 45, 41);
+  box-shadow: 0 0 8px 0;
+}
+
+nav li a {
+  display: block;
+  font-size: 25px;
+  font-weight: bolder;
+  color: white;
+  text-decoration: none;
+  margin: auto;
+  padding: 12px 10px;
+  text-align: center;
+}
+
+footer {
+  background-color: rgb(43, 39, 36);
+  height: 40px;
+}
+
+footer p {
+  color: white;
+  margin: 0;
+  font-size: 20px;
+  position: relative;
+  display: inline;
+  left: 15px;
+  top: 8px;
+}
+
+footer img {
+  width: 2%;
+  position: relative;
+  float: right;
+  right: 15px;
+  top: 7px;
+  padding: 0 5px;
+}
