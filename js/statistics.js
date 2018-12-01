@@ -26,9 +26,8 @@ function housesInit() {
 }
 
 function housesSum() {
-  // var szoveg = '';
   var houses = housesInit();
-  for (i = 0; i < gameOfThronesCharacters.length; i++) {
+  for (var i = 0; i < gameOfThronesCharacters.length; i++) {
     if ( gameOfThronesCharacters[i].house) {
       for (var j = 0; j < houses.length; j++)  {
         if (gameOfThronesCharacters[i].house === houses[j].house) {
@@ -44,7 +43,7 @@ function housesSum() {
 function writeHouses() {
   var houses = housesSum();
   var szoveg = '<tr><th>name of house</th><th>crest</th><th>number of members</th></tr>';
-  for (i = 0; i < houses.length; i++) {
+  for (var i = 0; i < houses.length; i++) {
     szoveg += '<tr><td>' +  houses[i].house + ' </td><td><img src=' +  houses[i].image + ' alt=' +  houses[i].house + '> </td><td>' +  parseInt(houses[i].sum, 10) + ' </td></tr>';
   }
   document.querySelector('#solution').innerHTML = '';
@@ -67,7 +66,6 @@ function deadList() {
 
 function aliveList() {
   var al = [];
-  // var szoveg = '';
   for (var i = 0; i < gameOfThronesCharacters.length; i++) {
     if ( !gameOfThronesCharacters[i].dead) {
       al.push(gameOfThronesCharacters[i].name);
@@ -83,13 +81,10 @@ function writeMembers() {
   var listAl = '<div "style=width:50%; float:left;">';
   var listDe = '<div "style=width:50%; float:right;">';
   var szoveg = '<tr><th>alive</th><th>dead</th></tr>';
-
   for (var i = 0; i < al.length; i++) {
     listAl += al[i] + '<br>';
   }
   listAl += '</div>';
-
-
   for ( i = 0; i < de.length; i++) {
     listDe += de[i] + '<br>';
   }
@@ -97,12 +92,8 @@ function writeMembers() {
   szoveg += '<tr><td>' + listAl + '</td><td>' + listDe + '</td></tr>';
   szoveg += '<tr><th>number of alive members</th><th>number of dead members</th></tr>';
   szoveg += '<tr><td>' + parseInt(al.length, 10) + '</td><td>' + parseInt(de.length, 10) + '</td></tr>';
-
-  // var szoveg = '<tr><th>name of house</th><th>crest</th><th>number of members</th></tr>';
-
   document.querySelector('#solution').innerHTML = '';
   document.querySelector('#solution').innerHTML = szoveg;
-  // alert(szoveg);
 }
 
 function orgesList() {
@@ -132,9 +123,8 @@ function orgesInit() {
 }
 
 function orgSum() {
-  var szoveg = '';
   var orges = orgesInit();
-  for (i = 0; i < gameOfThronesCharacters.length; i++) {
+  for (var i = 0; i < gameOfThronesCharacters.length; i++) {
     if ( gameOfThronesCharacters[i].organization) {
       for (var j = 0; j < orges.length; j++)  {
         if (gameOfThronesCharacters[i].organization === orges[j].org) {
@@ -160,9 +150,9 @@ function writeNothing() {
   document.querySelector('#solution3').innerHTML = '';
 }
 
-var whatList = 0;
 function writeList(n) {
-  // whatList = 1;
+  var whatList = 0;
+
   switch (n) {
   case 1:writeHouses();
     break;
@@ -173,39 +163,3 @@ function writeList(n) {
   default:writeNothing();
   }
 }
-// végrehajtás
-// housesList();
-// housesInit();
-// housesSum();
-// deadList();
-// document.querySelector('#solution').innerHTML = '';
-// btnElement = document.getElementById('showHouses');
-// btnElement.addEventListener('click', writeHouses() );
-// writeHouses();
-// writeMembers();
-// writeOrgs();
-// writeNothing();
-
-//document.getElementById('showHouses').addEventListener('click', writeList(1) );
-//document.getElementById('showMembers').addEventListener('click', writeList(2));
-//document.getElementById('showOrgs').addEventListener('click', writeList(3) );
-//switch (whatList) {
-//case 1:writeHouses();
-//  break;
-//case 2:writeMembers();
- // break;
-//case 3:writeOrgs();
- // break;
-//default:writeNothing();
-//}
-
-
-// write switch-el
-
-// arr = aliveList();
-// for (i = 0; i < arr.length; i++) {
-// document.querySelector('#solution').innerHTML += arr[i] + ' <br>';
-// }
-// for (i = 0; i < arr.length; i++) {
-// document.querySelector('#solution').innerHTML += '<div width: 500px;>' + arr[i].house + '  <img src=' + arr[i].image + ' alt=' + arr[i].house + '>házak tagja ' + arr[i].sum + ' </div>';
-// }
