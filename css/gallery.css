@@ -1,26 +1,21 @@
-body{
+body {
   background: url(/img/pictures/seven_kingdoms.jpg);
 }
-.container{
-  font-family:'Cinzel Decorative',cursive;
-  margin: 0 auto;
-  padding: 0 15px;
-  position:relative;
-  max-width:1140px;
-}
+
 .galleryTitle {
   color: white;
-  text-align: center; 
+  text-align: center;
 }
+
 .galleryElement {
-  float: left;
-  margin:0 3px ;
+  display: inline;
+  margin: 0 3px;
   position: relative;
   overflow: hidden;
-  width: 22%;  
 }
-.galleryElement img{
-  color:white;
+
+.galleryElement img {
+  color: white;
   vertical-align: 2em;
   height: 150px;
 }
