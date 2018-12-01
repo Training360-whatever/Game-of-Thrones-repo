@@ -1,28 +1,15 @@
 var i = 0
-
 while (i < gameOfThronesCharacters.length) {
   if (gameOfThronesCharacters.hasOwnProperty(i)) {
-    if (gameOfThronesCharacters[i].organization) {
-      document.querySelector('.table__body').innerHTML += 
-      `<tr>
-      <td>${gameOfThronesCharacters[i].name}</td>
-      <td><img class='proba' src="${gameOfThronesCharacters[i].portrait}" alt="${gameOfThronesCharacters[i].name}"></td>
-      <td>${gameOfThronesCharacters[i].organization}</td>
-      <td>${gameOfThronesCharacters[i].bio}</td>
-      <td><img src="./img/icons/edit.png" alt="edit" class="table-edit"></td>
-      <td><img src="./img/icons/delete.png" alt="delete" onclick="deleteRow()" class="table-remove"></td>
-      </tr>`;
-    } else if (gameOfThronesCharacters[i].house) {
-      document.querySelector('.table__body').innerHTML += 
-      `<tr>
-      <td>${gameOfThronesCharacters[i].name}</td>
-      <td><img class='proba' src="${gameOfThronesCharacters[i].portrait}" alt="${gameOfThronesCharacters[i].name}"></td>
-      <td>${gameOfThronesCharacters[i].house}</td>
-      <td>${gameOfThronesCharacters[i].bio}</td>
-      <td><img src="./img/icons/edit.png" alt="edit" class="table-edit"></td>
-      <td><img src="./img/icons/delete.png" alt="delete" onclick="deleteRow()" class="table-remove"></td>
-      </tr>`;
-    }
+    document.querySelector('.table__body').innerHTML +=
+    `<tr>
+    <td>${gameOfThronesCharacters[i].name}</td>
+    <td><img class='proba' src="${gameOfThronesCharacters[i].portrait}" alt="${gameOfThronesCharacters[i].name}"></td>
+    <td>${gameOfThronesCharacters[i].organization}</td>
+    <td contenteditable="false">${gameOfThronesCharacters[i].bio}</td>
+    <td><img src="./img/icons/edit.png" alt="edit" onclick="editRow()" class="table-edit${[i]}"></td>
+    <td><img src="./img/icons/delete.png" alt="delete" onclick="deleteRow()" class="table-remove"></td>
+    </tr>`;
   }
   i++;
 }
