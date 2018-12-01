@@ -38,25 +38,30 @@ function housesSum() {
       }
     }
   }
-
-  // document.querySelector('#solution').innerHTML = szoveg;
-
-  // write
-  // for (i = 0; i < t.length; i++) {
-  // document.querySelector('#solution').innerHTML += ', ' + t[i];
-  // }
-
   return houses;
+}
+
+function writeHouses() {
+  var houses = housesSum();
+  var szoveg = '<tr><th>háznév</th><th>címer</th><th>tagok száma</th></tr>';
+  for (i = 0; i < houses.length; i++) {
+    szoveg += '<tr><td>' +  houses[i].house + ' </td><td><img src=' +  houses[i].image + ' alt=' +  houses[i].house + '> </td><td>' +  houses[i].sum + ' </td></tr>';
+  }
+  document.querySelector('#solution').innerHTML = '';
+  document.querySelector('#solution').innerHTML = szoveg;
 }
 
 // végrehajtás
 // housesList();
 // housesInit();
-housesSum();
-
+//housesSum();
+document.querySelector('#solution').innerHTML = '';
+btnElement=document.getElementById('showHouses');
+btnElement.addEventListener('click', writeHouses() );
+//writeHouses();
 // write
-arr = housesSum();
+//arr = housesSum();
 
-for (i = 0; i < arr.length; i++) {
-  document.querySelector('#solution').innerHTML += '<div width: 500px;>' + arr[i].house + '  <img src=' + arr[i].image + ' alt=' + arr[i].house + '>házak tagja ' + arr[i].sum + ' </div>';
-}
+//for (i = 0; i < arr.length; i++) {
+ // document.querySelector('#solution').innerHTML += '<div width: 500px;>' + arr[i].house + '  <img src=' + arr[i].image + ' alt=' + arr[i].house + '>házak tagja ' + arr[i].sum + ' </div>';
+//}
