@@ -22,7 +22,7 @@ body {
 
 .container {
   margin: 0 auto;
-  max-width: 1140px;
+  width: 1140px;
   padding: 15px;
 }
 
@@ -107,7 +107,6 @@ footer p {
 
 footer img {
   width: 2%;
-  display: inline;
   position: relative;
   float: right;
   right: 15px;
