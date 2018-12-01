@@ -21,7 +21,7 @@ var randomQuotes = [
   'The day will come when you think you are safe and happy, and your joy will turn to ashes in your mouth.  —  Tyrion'
 ];
 
-  var randomNumberForQuotes = Math.floor(Math.random() * 20);
-  document.getElementById('random-quote-display').innerHTML = `${randomQuotes[randomNumberForQuotes]}`;
+var randomNumberForQuotes = Math.floor(Math.random() * 20);
+document.getElementById('random-quote-display').innerHTML = `${randomQuotes[randomNumberForQuotes]}`;
 
 
