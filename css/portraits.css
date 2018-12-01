@@ -7,19 +7,19 @@
 }
 
 .prt {
-  width: 16%;
-  float: left;
+  width: 180px;
+  display: inline-block;
   font-family: 'Cinzel Decorative', cursive;
   text-align: center;
   font-size: 90%;
   font-weight: bolder;
   padding: 1px;
-  margin-top: 25px;
-  margin-top: 25px;
+  margin: 25px auto;
 }
 
 .container {
   margin: 0 auto;
-  max-width: 1140px;
+  width: 1140px;
   padding: 15px;
+  text-align: center;
 }
