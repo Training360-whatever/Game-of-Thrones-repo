@@ -1,7 +1,7 @@
 var p = 0
 while (p < gameOfThronesCharacters.length) {
   if (gameOfThronesCharacters.hasOwnProperty(p)) {
-    document.querySelector('.portrai').innerHTML +=
+    document.querySelector('.portraits').innerHTML +=
       `
       <div class="prt"> 
       <img src="${gameOfThronesCharacters[p].portrait}" alt="${gameOfThronesCharacters[p].name}">
@@ -13,3 +13,7 @@ while (p < gameOfThronesCharacters.length) {
 
   p++;
 }
+document.querySelector('.cont').innerHTML += `
+Portraits
+<br><br>
+`
