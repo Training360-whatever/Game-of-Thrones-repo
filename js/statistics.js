@@ -95,6 +95,8 @@ function writeMembers() {
   }
   listDe += '</div>';
   szoveg+='<tr><td>'+listAl+'</td><td>'+listDe+'</td></tr>';
+  szoveg+='<tr><th>number of alive members</th><th>number of dead members</th></tr>';
+  szoveg+='<tr><td>'+parseInt(al.length,10)+'</td><td>'+parseInt(de.length,10)+'</td></tr>';
 
   // var szoveg = '<tr><th>name of house</th><th>crest</th><th>number of members</th></tr>';
 
