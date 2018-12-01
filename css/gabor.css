@@ -24,10 +24,6 @@ img[class^="table-edit"], img.table-remove, img.table-arrow {
     max-width: 40px;
 }
 
-img.table-remove:hoover {
-    
-}
-
 div.container {
     margin: 0 auto;
     width: 1140px;
@@ -35,13 +31,10 @@ div.container {
 }
 
 rect.btn {
-    stroke:#fff;
     fill:#fff;
     fill-opacity:0;
-    stroke-opacity:0;
 }
 
-path:hover {
+svg:hover .nyil {
     stroke: red;
-    fill: none;
-}
+  }
