@@ -22,6 +22,6 @@ var randomQuotes = [
 ];
 
 var randomNumberForQuotes = Math.floor(Math.random() * 20);
-document.getElementById('random-quote-display').innerHTML = `${randomQuotes[randomNumberForQuotes]}`;
+document.getElementById('quotebar__display').innerHTML = `${randomQuotes[randomNumberForQuotes]}`;
 
 
