@@ -30,13 +30,18 @@ img.table-remove:hoover {
 
 div.container {
     margin: 0 auto;
-    max-width: 1140px;
+    width: 1140px;
     padding: 15px;
-  }
+}
 
 rect.btn {
-  stroke:#fff;
-  fill:#fff;
-  fill-opacity:0;
-  stroke-opacity:0;
+    stroke:#fff;
+    fill:#fff;
+    fill-opacity:0;
+    stroke-opacity:0;
+}
+
+path:hover {
+    stroke: red;
+    fill: none;
 }
