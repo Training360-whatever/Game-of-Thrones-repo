@@ -43,7 +43,7 @@ function housesSum() {
 
 function writeHouses() {
   var houses = housesSum();
-  var szoveg = '<tr><th>háznév</th><th>címer</th><th>tagok száma</th></tr>';
+  var szoveg = '<tr><th>name of house</th><th>crest</th><th>number of members</th></tr>';
   for (i = 0; i < houses.length; i++) {
     szoveg += '<tr><td>' +  houses[i].house + ' </td><td><img src=' +  houses[i].image + ' alt=' +  houses[i].house + '> </td><td>' +  houses[i].sum + ' </td></tr>';
   }
@@ -80,7 +80,7 @@ function aliveList() {
 // housesList();
 // housesInit();
 // housesSum();
-deadList();
+// deadList();
 // document.querySelector('#solution').innerHTML = '';
 // btnElement = document.getElementById('showHouses');
 // btnElement.addEventListener('click', writeHouses() );
@@ -88,8 +88,8 @@ deadList();
 // write
 arr = aliveList();
 for (i = 0; i < arr.length; i++) {
-    document.querySelector('#solutions').innerHTML +=arr[i]+' <br>';
+  document.querySelector('#solutions').innerHTML += arr[i] + ' <br>';
 }
-//for (i = 0; i < arr.length; i++) {
- // document.querySelector('#solution').innerHTML += '<div width: 500px;>' + arr[i].house + '  <img src=' + arr[i].image + ' alt=' + arr[i].house + '>házak tagja ' + arr[i].sum + ' </div>';
-//}
+// for (i = 0; i < arr.length; i++) {
+// document.querySelector('#solution').innerHTML += '<div width: 500px;>' + arr[i].house + '  <img src=' + arr[i].image + ' alt=' + arr[i].house + '>házak tagja ' + arr[i].sum + ' </div>';
+// }
