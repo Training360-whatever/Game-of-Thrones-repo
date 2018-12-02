@@ -7,6 +7,10 @@ th, td {
     padding: 10px;
 }
 
+td:focus {
+    background-color: yellow;
+}
+
 th {
     font-size: 1.25em;
 }
@@ -46,6 +50,11 @@ rect.btn {
 svg:hover .nyil {
     stroke: red;
   }
+
+svg:hover .iksz, 
+svg:hover .edit-symbol {
+    fill: red;
+}
 
 [id^="house"] {
     text-align: center;
