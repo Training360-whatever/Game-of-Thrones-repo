@@ -11,22 +11,45 @@
 </head>
 
 <body>
-    <h1>Characters</h1>
-    <table>
-        <thead>
-            <th>Name</th>
-            <th>Portrait</th>
-            <th>House</th>
-            <th>Bio</th>
-            <th><img src="./img/icons/up.png" alt="abc" onclick="ascByName()" class="table-arrow"></th>
-            <th><img src="./img/icons/down.png" alt="cba" onclick="descByName()" class="table-arrow"></th>
-        </thead>
-        <tfoot></tfoot>
-        <tbody class="table__body">
-        </tbody>
-    </table>
-        <script src="./js/characters.js"></script>
-        <script src="./js/gabor.js"></script>
+    <div class="container">
+        <header>
+            <h1>Characters</h1>
+        </header>
+        <main>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Name <svg width="20" height="18" onclick="ascByName()">
+                                <polyline class="nyil" points="2,16 10,2 18,16" fill="none" stroke="black" stroke-width="3"
+                                    stroke-linecap="round" />
+                            </svg>
+                            <svg width="20" height="18" onclick="descByName()">
+                                <polyline class="nyil" points="2,2 10,16 18,2" fill="none" stroke="black" stroke-width="3"
+                                    stroke-linecap="round" />
+                            </svg>
+                        </th>
+                        <th>Portrait</th>
+                        <th colspan="2">House <svg width="20" height="18" onclick="ascByHouse()">
+                                <polyline class="nyil" points="2,16 10,2 18,16" fill="none" stroke="black" stroke-width="3"
+                                    stroke-linecap="round" />
+                            </svg>
+                            <svg width="20" height="18" onclick="descByHouse()">
+                                <polyline class="nyil" points="2,2 10,16 18,2" fill="none" stroke="black" stroke-width="3"
+                                    stroke-linecap="round" />
+                            </svg>
+                        </th>
+                        <th>Bio</th>
+                        <th></th>
+                        <th></th>
+                    </tr>
+                </thead>
+                <tbody class="table__body">
+                </tbody>
+            </table>
+        </main>
+    </div>
+    <script src="./js/characters.js"></script>
+    <script src="./js/gabor.js"></script>
 </body>
 
 </html>
