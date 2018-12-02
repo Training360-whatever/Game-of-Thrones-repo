@@ -1,4 +1,4 @@
-var p = 0
+var p = 0;
 while (p < gameOfThronesCharacters.length) {
   if (gameOfThronesCharacters.hasOwnProperty(p)) {
     document.querySelector('.portraits').innerHTML +=
@@ -16,4 +16,5 @@ while (p < gameOfThronesCharacters.length) {
 document.querySelector('.cont').innerHTML += `
 Portraits
 <br><br>
-`
+`;
+
