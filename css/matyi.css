@@ -39,9 +39,10 @@ footer p {
   display: inline;
   left: 15px;
   top: 8px;
+  text-align: right;
 }
 
-footer img {
+footer svg {
   width: 2%;
   position: relative;
   float: right;
@@ -201,6 +202,14 @@ mark,
 audio,
 video {
   font-family: 'Cinzel Decorative', cursive;
+}
+
+svg:hover .footer__fb-logo {
+  fill: #3b5998;
+}
+
+svg:hover .footer__email-logo {
+  fill: lightseagreen;
 }
 
 
