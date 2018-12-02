@@ -47,6 +47,7 @@ button {
 /* Change color of dropdown links on hover */
 .dropdown-content button:hover {
   background-color: rgb(95, 87, 76);
+  box-shadow: 0 0 3px black;
 }
 
 .dropdown-content a {
