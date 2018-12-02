@@ -9,7 +9,10 @@ td {
 }
 
 td:focus {
-    background-color: yellow;
+    background-color: rgb(250, 244, 169);
+    outline:none;
+    border-right: 1px dashed gray;
+    border-left: 1px dashed gray;
 }
 
 th {
@@ -28,101 +31,10 @@ tbody tr:nth-child(odd) {
     background-color: #f2f2f2;
 }
 
-/* minden legyen azonos betűtípussal, ez az összes html tag */
-html,
-body,
-div,
-span,
-applet,
-object,
-iframe,
-h1,
-h2,
-h3,
-h4,
-h5,
-h6,
-p,
-blockquote,
-pre,
-a,
-abbr,
-acronym,
-address,
-big,
-cite,
-code,
-del,
-dfn,
-em,
-img,
-ins,
-kbd,
-q,
-s,
-samp,
-small,
-strike,
-strong,
-sub,
-sup,
-tt,
-var,
-b,
-u,
-i,
-center,
-dl,
-dt,
-dd,
-ol,
-ul,
-li,
-fieldset,
-form,
-label,
-legend,
-table,
-caption,
-tbody,
-tfoot,
-thead,
-tr,
-th,
-td,
-article,
-aside,
-canvas,
-details,
-embed,
-figure,
-figcaption,
-footer,
-header,
-hgroup,
-menu,
-nav,
-output,
-ruby,
-section,
-summary,
-time,
-mark,
-audio,
-video {
-    font-family: 'Cinzel Decorative', cursive;
-}
-
 img[class^="table-edit"],
 img.table-remove,
 img.table-arrow {
     max-width: 40px;
-}
-
-.container {
-    margin: 0 auto;
-    width: 1140px;
-    padding: 15px;
 }
 
 rect.btn {
