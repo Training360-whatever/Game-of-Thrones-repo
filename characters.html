@@ -11,36 +11,39 @@
 </head>
 
 <body>
-    <div class="container">
+    <main class="container">
         <h1>Characters</h1>
         <table>
             <thead>
-                <th>Name <svg width="20" height="22" onclick="ascByName()">
-                    <polyline class="nyil" points="2,2 10,20 18,2" fill="none" stroke="black" stroke-width="3" stroke-linecap="round" />
-                  </svg>
-                <svg width="20" height="22" onclick="descByName()">
-                    <polyline class="nyil" points="2,20 10,2 18,20" fill="none" stroke="black" stroke-width="3" stroke-linecap="round" />
-                  </svg>
-                </th>
-                <th>Portrait</th>
-                <th colspan="2">House <svg width="20" height="22" onclick="ascByHouse()">
-                    <polyline class="nyil" points="2,2 10,20 18,2" fill="none" stroke="black" stroke-width="3" stroke-linecap="round" />
-                  </svg>
-                <svg width="20" height="22" onclick="descByHouse()">
-                    <polyline class="nyil" points="2,20 10,2 18,20" fill="none" stroke="black" stroke-width="3" stroke-linecap="round" />
-                  </svg>
-                </svg>
-                </th>
-                <th>Bio</th>
-                <th></th>
-                <th></th>
+                <tr>
+                    <th>Name <svg width="20" height="18" onclick="ascByName()">
+                            <polyline class="nyil" points="2,16 10,2 18,16" fill="none" stroke="black" stroke-width="3"
+                                stroke-linecap="round" />
+                        </svg>
+                        <svg width="20" height="18" onclick="descByName()">
+                            <polyline class="nyil" points="2,2 10,16 18,2" fill="none" stroke="black" stroke-width="3"
+                                stroke-linecap="round" />
+                        </svg>
+                    </th>
+                    <th>Portrait</th>
+                    <th colspan="2">House <svg width="20" height="18" onclick="ascByHouse()">
+                            <polyline class="nyil" points="2,16 10,2 18,16" fill="none" stroke="black" stroke-width="3"
+                                stroke-linecap="round" />
+                        </svg>
+                        <svg width="20" height="18" onclick="descByHouse()">
+                            <polyline class="nyil" points="2,2 10,16 18,2" fill="none" stroke="black" stroke-width="3"
+                                stroke-linecap="round" />
+                        </svg>
+                    </th>
+                    <th>Bio</th>
+                    <th></th>
+                    <th></th>
+                </tr>
             </thead>
-            <tfoot></tfoot>
             <tbody class="table__body">
             </tbody>
         </table>
-    </div>
-    <textarea name="text" oninput='this.style.height = "";this.style.height = this.scrollHeight + "px"'></textarea>
+    </main>
     <script src="./js/characters.js"></script>
     <script src="./js/gabor.js"></script>
 </body>
