@@ -2,54 +2,85 @@
 <html lang="hu">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Karakterek</title>
-    <link href="https://fonts.googleapis.com/css?family=Cinzel+Decorative" rel="stylesheet">
-    <link rel="stylesheet" href="./css/gabor.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Characters GoT</title>
+  <link href="https://fonts.googleapis.com/css?family=Cinzel+Decorative" rel="stylesheet">
+  <link rel="stylesheet" href="./css/gabor.css">
+  <link rel="stylesheet" href="/css/matyi.css">
+  <link rel="stylesheet" href="/css/statistics-menu.css">
 </head>
 
 <body>
-    <div class="container">
-        <header>
-            <h1>Characters</h1>
-        </header>
-        <main>
-            <table>
-                <thead>
-                    <tr>
-                        <th>Name <svg width="20" height="18" onclick="ascByName()">
-                                <polyline class="nyil" points="2,16 10,2 18,16" fill="none" stroke="black" stroke-width="3"
-                                    stroke-linecap="round" />
-                            </svg>
-                            <svg width="20" height="18" onclick="descByName()">
-                                <polyline class="nyil" points="2,2 10,16 18,2" fill="none" stroke="black" stroke-width="3"
-                                    stroke-linecap="round" />
-                            </svg>
-                        </th>
-                        <th>Portrait</th>
-                        <th colspan="2">House <svg width="20" height="18" onclick="ascByHouse()">
-                                <polyline class="nyil" points="2,16 10,2 18,16" fill="none" stroke="black" stroke-width="3"
-                                    stroke-linecap="round" />
-                            </svg>
-                            <svg width="20" height="18" onclick="descByHouse()">
-                                <polyline class="nyil" points="2,2 10,16 18,2" fill="none" stroke="black" stroke-width="3"
-                                    stroke-linecap="round" />
-                            </svg>
-                        </th>
-                        <th>Bio</th>
-                        <th></th>
-                        <th></th>
-                    </tr>
-                </thead>
-                <tbody class="table__body">
-                </tbody>
-            </table>
-        </main>
+  <div class="quotebar">
+      <img src="/img/other/got_logo2.png" alt="logo">
+      <span id="quotebar__display"></span>
+  </div>
+<nav class="navigation">
+    <ul>
+        <li class="active"><a href="index.html">Main</a></li>
+        <li><a href="characters.html">Characters</a></li>
+        <li>
+            <div class="dropdown">
+                <button class="dropbtn">Statistics</button>
+                <div class="dropdown-content">
+                    <a href="statistics.html">Alive/Dead</a>
+                    <a href="statistics.html">Houses</a>
+                    <a href="statistics.html">Organisations</a>
+                </div>
+            </div>
+        </li>
+        <li><a href="portraits.html">Portraits</a></li>
+        <li><a href="gallery.html">Gallery</a></li>
+    </ul>
+</nav>
+<header>
+    <div class="header__img">
+        <img src="/img/other/banner.jpg" alt="game of thrones">
     </div>
-    <script src="./js/characters.js"></script>
-    <script src="./js/gabor.js"></script>
+</header>
+  <main class="container">
+    <h1>Characters</h1>
+    <table>
+      <thead>
+        <tr>
+          <th>Name <svg width="20" height="18" onclick="ascByName()">
+                  <polyline class="nyil" points="2,16 10,2 18,16" fill="none" stroke="black" stroke-width="3"
+                      stroke-linecap="round" />
+              </svg>
+              <svg width="20" height="18" onclick="descByName()">
+                  <polyline class="nyil" points="2,2 10,16 18,2" fill="none" stroke="black" stroke-width="3"
+                      stroke-linecap="round" />
+              </svg>
+          </th>
+          <th>Portrait</th>
+          <th colspan="2">House <svg width="20" height="18" onclick="ascByHouse()">
+                  <polyline class="nyil" points="2,16 10,2 18,16" fill="none" stroke="black" stroke-width="3"
+                      stroke-linecap="round" />
+              </svg>
+              <svg width="20" height="18" onclick="descByHouse()">
+                  <polyline class="nyil" points="2,2 10,16 18,2" fill="none" stroke="black" stroke-width="3"
+                      stroke-linecap="round" />
+              </svg>
+          </th>
+          <th>Bio</th>
+          <th></th>
+          <th></th>
+        </tr>
+      </thead>
+      <tbody class="table__body">
+      </tbody>
+    </table>
+  </main>
+<footer>
+    <a href="https://www.facebook.com/groups/494730314364908/"><img src="/img/other/facebook.png" alt="fb"></a>
+    <a href="mailto:example@gmail.com"><img src="/img/other/email.png" alt="mail"></a>
+    <p>&copy; 2018 - <i>Whatever</i> team</p>
+</footer>
+<script src="/js/matyi.js"></script>
+  <script src="./js/characters.js"></script>
+  <script src="./js/gabor.js"></script>
 </body>
 
 </html>
