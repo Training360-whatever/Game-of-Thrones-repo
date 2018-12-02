@@ -11,7 +11,7 @@
 <link rel="stylesheet" href="/css/statistics-menu.css">
 </head>
 
-<body>
+<body onload="writeList(2)">
 <div class="quotebar">
   <img src="/img/other/got_logo2.png" alt="logo">
   <span id="quotebar__display"></span>
@@ -40,9 +40,11 @@
   </div>
 </header>
 <main class="container">
-  <h1>Statistics</h1>
-  <table id="solution">
-  </table>
+  <div class="statistics__table">
+    <h1>Statistics</h1>
+    <table id="solution">
+    </table>
+  </div>
 </main>
 
 <footer>

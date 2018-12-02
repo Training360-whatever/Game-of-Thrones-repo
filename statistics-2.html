@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="hu">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Statistics GoT</title>
+  <link href="https://fonts.googleapis.com/css?family=Cinzel+Decorative" rel="stylesheet">
+  <link rel="stylesheet" href="./css/moni.css">
+  <link rel="stylesheet" href="/css/matyi.css">
+  <link rel="stylesheet" href="/css/statistics-menu.css">
+</head>
+
+<body onload="writeList(2)">
+  <div class="quotebar">
+    <img src="/img/other/got_logo2.png" alt="logo">
+    <span id="quotebar__display"></span>
+  </div>
+  <nav class="navigation">
+    <ul>
+      <li><a href="index.html">Main</a></li>
+      <li><a href="characters.html">Characters</a></li>
+      <li class="active">
+        <div class="dropdown">
+          <button class="dropbtn">Statistics</button>
+          <div class="dropdown-content">
+            <button onclick="writeList(2)" id="showMembers">Alive/Dead</button>
+            <button onclick="writeList(1)" id="showHouses">Houses</button>
+            <button onclick="writeList(3)" id="showOrgs">Organizations</button>
+          </div>
+        </div>
+      </li>
+      <li><a href="portraits.html">Portraits</a></li>
+      <li><a href="gallery.html">Gallery</a></li>
+    </ul>
+  </nav>
+  <header>
+    <div class="header__img">
+      <img src="/img/other/banner.jpg" alt="game of thrones">
+    </div>
+  </header>
+  <main class="container">
+    <div class="statistics__table">
+      <h1>Statistics</h1>
+      <table id="solution">
+      </table>
+    </div>
+  </main>
+
+  <footer>
+    <a href="https://www.facebook.com/groups/494730314364908/"><img src="/img/other/facebook.png" alt="fb"></a>
+    <a href="mailto:example@gmail.com"><img src="/img/other/email.png" alt="mail"></a>
+    <p>&copy; 2018 - <i>Whatever</i> team</p>
+  </footer>
+  <script src="/js/matyi.js"></script>
+  <script src="./js/characters.js"></script>
+  <script src="./js/statistics.js"></script>
+</body>
+
+</html>

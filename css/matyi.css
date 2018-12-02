@@ -25,6 +25,22 @@ body {
   margin-bottom: 10px;
 }
 
+.dropdown-content a {
+      display: block;
+      font-size: 15px;
+      font-weight: bolder;
+      color: white;
+      text-decoration: none;
+      margin: auto;
+      padding: 12px 10px;
+      text-align: center;
+}
+
+.dropdown-content a:hover {
+        background-color: rgb(49, 45, 41);
+        box-shadow: 0 0 6px black;
+}
+
 footer {
   background-color: rgb(43, 39, 36);
   height: 40px;
@@ -74,6 +90,7 @@ nav ul {
 nav li {
   float: left;
   width: 20%;
+  transition-duration: 0.3s;
 }
 
 nav li:hover {
