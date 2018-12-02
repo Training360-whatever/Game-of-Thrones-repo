@@ -49,6 +49,22 @@ button {
   background-color: rgb(95, 87, 76);
 }
 
+.dropdown-content a {
+  display: block;
+  font-size: 15px;
+  font-weight: bolder;
+  color: white;
+  text-decoration: none;
+  margin: auto;
+  padding: 12px 10px;
+  text-align: center;
+}
+
+.dropdown-content a:hover {
+  background-color: rgb(95, 87, 76);
+  box-shadow: 0 0 3px black;
+}
+
 /* Show the dropdown menu on hover */
 .dropdown:hover .dropdown-content {
   display: block

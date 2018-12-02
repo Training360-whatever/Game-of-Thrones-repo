@@ -68,9 +68,9 @@ function initialListing() {
 initialListing();
 
 function deleteRow(i) {
-  var td = document.getElementById(`table-remove-${[i]}`)
+  var td = document.getElementById(`table-remove-${[i]}`);
   var tr = td.parentNode;
-  tr.parentNode.removeChild(tr)
+  tr.parentNode.removeChild(tr);
 }
 
 function editRow(i) {
